@@ -1,24 +1,47 @@
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>My Portfolio</title>
     <link rel="alternate" type="application/rss+xml" title="My Portfolio" href="/rss/posts">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <template name="header">
-    <div class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-            <a href="/" class="navbar-brand">Portfolio</a>
+    <div class="brand">{{getBrandName}}</div>
+    <div class="address-bar">Photograher | Blogger | Footballer</div>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="/">{{getBrandName}}</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/photos">Photos</a>
+                    </li>
+                    <li>
+                        <a href="/blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    {{> loginButtons}}
+                </ul>
+            </div>
         </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-left">
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/news">News</a></li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                {{> loginButtons}}
-            </ul>
-        </div>
-    </div>
+    </nav>
 </template>

@@ -1,7 +1,99 @@
 <template name="home">
-    <h1>Portfolio</h1>
-    <p><strong>Evangelos</strong></p>
-    <p>Evangelos is a MeterJS developer and will soon take over the world.</p>
-    <p>You can find more info about me here:</p>
-    <p><a href="https://ch.linkedin.com/in/epapa">LinkedIn</a></p>
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12 text-center">
+                <div id="carousel-example-generic" class="carousel slide">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators hidden-xs">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img class="img-responsive img-full" src="blogger.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive img-full" src="photographer.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="icon-prev"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="icon-next"></span>
+                    </a>
+                </div>
+                <h2 class="brand-before"><small>Impossible Is Nothing</small></h2>
+                <h1 class="brand-name">{{getBrandName}}</h1>
+                <hr class="tagline-divider">
+                <h2>
+                        <small>By
+                            <strong>LazyGalaxy</strong>
+                        </small>
+                    </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">About
+                        <strong>{{getBrandName}}</strong>
+                    </h2>
+                <hr>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive img-border-left" src="footballer.jpg" alt="">
+            </div>
+            <div class="col-md-6">
+                <p>Georgios "Giorgos" Karagounis (Greek: Γιώργος Καραγκούνης; born 6 March 1977) is a Greek former professional footballer. Internationally, Karagounis represented the Greece national team between 1999 and 2014. He was a member of the Euro 2004 winning squad, and also represented Greece in Euro 2008, the 2010 World Cup, Euro 2012 and the 2014 World Cup. With 139 appearances, he is the most capped player in the history of the Greek national team.</p>
+                <p>Since his retirement from football, Giorgos has picked up photography and blogging. With his keen eye for the best photo shot and amazing writing skills, he has managed to form an explosive combination of these two skills. This is the website he aims to present to the world his newly found passion.</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Where to go next?</h2>
+                <hr>
+            </div>
+            <div class="col-sm-4 text-center">
+                <a href="/photos">
+                    <img class="img-responsive" src="photos.jpg" alt="">
+                    <h3>Photos</h3>
+                    <h5 class="brand-before">Browse his portfolio</h5>
+                </a>
+            </div>
+            <div class="col-sm-4 text-center">
+                <a href="/blog">
+                    <img class="img-responsive" src="blog.jpg" alt="">
+                    <h3>Blog</h3>
+                    <h5 class="brand-before">Read what he has to say</h5>
+                </a>
+            </div>
+            <div class="col-sm-4 text-center">
+                <a href="/contact">
+                    <img class="img-responsive" src="contact.jpg" alt="">
+                    <h3>Contact </h3>
+                    <h5 class="brand-before">Speak to the legend</h5>
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <script>
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        })
+    </script>
 </template>

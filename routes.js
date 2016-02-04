@@ -6,10 +6,10 @@ Router.route('/', function () {
     this.render('home');
 });
 
-Router.route('/projects', function () {
-    this.render('projects');
+Router.route('/photos', function () {
+    this.render('photos');
 });
 
-Router.route('/news', function () {
-    this.render('news');
+Router.route('/contact', function () {
+    this.render('contact');
 });
