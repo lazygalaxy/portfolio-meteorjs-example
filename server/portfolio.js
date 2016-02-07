@@ -1,6 +1,6 @@
 Blog.config({
     rss: {
-        title: 'My Portfolio',
-        description: 'Examples of my work'
+        title: 'Giorgios Karagounis',
+        description: 'Photograoher - Blogger - Footballer'
     }
 });
