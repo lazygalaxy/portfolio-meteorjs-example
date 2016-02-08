@@ -2,7 +2,9 @@
 Blog.config({
     syntaxHighlighting: true,
     syntaxHighlightingTheme: 'github',
-    adminBasePath: '/myBlogAdmin'
+    adminBasePath: '/myBlogAdmin',
+    adminRole: 'blogAdmin',
+    authorRole: 'blogAuthor'
 });
 
 // templates
